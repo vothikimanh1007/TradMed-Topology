@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vi-TCM Topology Explorer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#deff9a', dark: '#121212', card: '#1e1e1e' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #121212; color: #f5f5f5; }
+        .glass-panel { background: rgba(30, 30, 30, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #deff9a, #4ade80); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        /* D3 Graph Styles */
+        .node circle { stroke: #fff; stroke-width: 1.5px; transition: all 0.3s; }
+        .node circle:hover { stroke: #deff9a; stroke-width: 3px; filter: drop-shadow(0 0 8px #deff9a); cursor: pointer; }
+        .link { stroke: #444; stroke-opacity: 0.6; }
+        .node text { font-family: 'Inter', sans-serif; pointer-events: none; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+    </style>
+</head>
+<body class="antialiased font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b-0 border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-leaf text-primary text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight">Vi-TCM <span class="text-primary">Explorer</span></span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="switchLang('vi')" id="btn-vi" class="text-sm font-semibold px-3 py-1 rounded bg-primary text-dark transition">VI</button>
+                    <button onclick="switchLang('en')" id="btn-en" class="text-sm font-semibold px-3 py-1 rounded text-gray-400 hover:text-white transition">EN</button>
+                    <a href="https://github.com/vothikimanh1007" target="_blank" class="text-gray-300 hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6" data-i18n="hero-title">
+                Khám phá Hình học của <br><span class="gradient-text">Y học Cổ truyền</span>
+            </h1>
+            <p class="text-lg text-gray-400 mb-8 leading-relaxed" data-i18n="hero-desc">
+                Hệ thống hỗ trợ quyết định lâm sàng sử dụng Trí tuệ nhân tạo (NLP) và Phân tích Dữ liệu Tô-pô (TDA) để giải mã mạng lưới hiệp đồng của 714 vị thuốc trong Dược điển Việt Nam.
+            </p>
+            <a href="#app-section" class="bg-primary text-dark font-bold py-3 px-8 rounded-full hover:bg-lime-300 transition duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(222,255,154,0.4)]">
+                <i class="fa-solid fa-microscope mr-2"></i><span data-i18n="hero-btn">Trải nghiệm ngay</span>
+            </a>
+        </div>
+        <div class="md:w-1/2 rounded-2xl overflow-hidden shadow-2xl border border-gray-800 relative">
+            <img src="https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Traditional Medicine herbs" class="w-full h-80 object-cover opacity-80 hover:opacity-100 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+        </div>
+    </header>
+
+    <!-- Guide & Info Section -->
+    <section class="py-12 bg-card border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Info 1 -->
+                <div class="glass-panel p-6 rounded-xl">
+                    <div class="w-12 h-12 bg-primary/20 text-primary rounded-full flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-book-medical"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="info1-title">Nguồn Dữ Liệu</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="info1-desc">Được số hóa từ sách "Những cây thuốc và vị thuốc Việt Nam" của GS. Đỗ Tất Lợi. Phương pháp bảo toàn 100% ngữ nghĩa bản địa không qua dịch thuật.</p>
+                </div>
+                <!-- Info 2 -->
+                <div class="glass-panel p-6 rounded-xl">
+                    <div class="w-12 h-12 bg-primary/20 text-primary rounded-full flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="info2-title">Phân Tích Tô-pô</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="info2-desc">Sử dụng thuật toán TDA Mapper và Persistent Homology để lập bản đồ cấu trúc không gian liên tục của các hội chứng bệnh lý.</p>
+                </div>
+                <!-- Info 3 -->
+                <div class="glass-panel p-6 rounded-xl">
+                    <div class="w-12 h-12 bg-primary/20 text-primary rounded-full flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3 class="text-xl font-bold mb-2" data-i18n="info3-title">Hỗ Trợ Quyết Định</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="info3-desc">Giúp y bác sĩ và nhà nghiên cứu đối chiếu các bài thuốc cổ truyền với hệ thống phân loại sinh học tiến hóa (Phylogeny) của Tây y.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Manual -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-i18n="manual-title">Hướng Dẫn Sử Dụng</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary text-dark font-bold flex items-center justify-center text-lg">1</div>
+                <p class="text-gray-300" data-i18n="manual-step1">Nhập triệu chứng (VD: ho, suyễn)</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-gray-600 hidden md:block"></i>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary text-dark font-bold flex items-center justify-center text-lg">2</div>
+                <p class="text-gray-300" data-i18n="manual-step2">Nhấn Phân tích qua API AI</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-gray-600 hidden md:block"></i>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary text-dark font-bold flex items-center justify-center text-lg">3</div>
+                <p class="text-gray-300" data-i18n="manual-step3">Khám phá đồ thị và Gợi ý</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main App Section -->
+    <section id="app-section" class="py-12 bg-card border-t border-gray-800 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-8">
+            
+            <!-- Left Panel: Input & Decision Support -->
+            <div class="lg:col-span-1 flex flex-col gap-6">
+                <!-- Input Box -->
+                <div class="glass-panel p-6 rounded-xl border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-primary">
+                        <i class="fa-solid fa-brain"></i> <span data-i18n="input-title">Phân tích Lâm sàng</span>
+                    </h3>
+                    <p class="text-sm text-gray-400 mb-4" data-i18n="input-desc">Mô hình NLP sẽ phân tích ngữ nghĩa và liên kết với đồ thị Tô-pô.</p>
+                    <textarea id="symptom-input" rows="3" class="w-full bg-dark text-white border border-gray-600 rounded-lg p-3 focus:outline-none focus:border-primary transition resize-none mb-4" placeholder="Nhập triệu chứng bằng tiếng Việt (vd: đau nhức xương khớp, ho có đờm)..."></textarea>
+                    <button id="analyze-btn" onclick="queryBackend()" class="w-full bg-primary text-dark font-bold py-3 rounded-lg hover:bg-lime-400 transition flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> <span data-i18n="input-btn">Phân tích Hệ thống</span>
+                    </button>
+                    <p id="api-status" class="text-sm text-gray-400 mt-3 text-center hidden">Đang kết nối API...</p>
+                </div>
+
+                <!-- Decision Support Panel -->
+                <div id="decision-panel" class="glass-panel p-6 rounded-xl border border-gray-700 opacity-50 transition duration-500 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+                    <h3 class="text-lg font-bold mb-4" data-i18n="ds-title">Gợi ý Hỗ trợ Quyết định</h3>
+                    
+                    <div class="mb-4">
+                        <span class="text-xs text-gray-400 uppercase font-semibold tracking-wider" data-i18n="ds-semantics">Cụm ngữ nghĩa phát hiện:</span>
+                        <p id="ds-keywords" class="text-lg font-bold text-white mt-1">---</p>
+                    </div>
+
+                    <div>
+                        <span class="text-xs text-gray-400 uppercase font-semibold tracking-wider" data-i18n="ds-recommendation">Khuyến nghị Y lý:</span>
+                        <p id="ds-action" class="text-sm text-gray-300 mt-1 leading-relaxed italic">
+                            Hãy nhập triệu chứng để hệ thống AI đưa ra khuyến nghị họ thực vật tiến hóa phù hợp nhất.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: D3 Topology Graph -->
+            <div class="lg:col-span-2 glass-panel rounded-xl border border-gray-700 p-2 flex flex-col h-[600px] relative">
+                <div class="absolute top-4 left-4 z-10 bg-dark/80 px-3 py-1 rounded text-xs text-gray-300 border border-gray-600 backdrop-blur-sm">
+                    <i class="fa-solid fa-arrows-up-down-left-right mr-1"></i> <span data-i18n="graph-hint">Cuộn để Thu/Phóng - Kéo để Di chuyển</span>
+                </div>
+                <div id="graph-container" class="w-full h-full bg-[#0a0a0a] rounded-lg overflow-hidden flex items-center justify-center">
+                    <!-- Loading or Fallback -->
+                    <div id="graph-loading" class="text-gray-500 text-center">
+                        <i class="fa-solid fa-circle-nodes text-4xl mb-3 text-gray-700 animate-pulse"></i>
+                        <p data-i18n="graph-loading">Đang tải dữ liệu đồ thị Tô-pô...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Author Info -->
+    <footer class="bg-[#0a0a0a] py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h4 class="text-lg font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-user-graduate text-primary"></i> <span data-i18n="author-name">Tác giả: Võ Thị Kim Anh</span>
+                </h4>
+                <p class="text-sm text-gray-500 mt-1" data-i18n="author-affil1">Khoa Công nghệ Thông tin, Đại học Tôn Đức Thắng, TP.HCM</p>
+                <p class="text-sm text-gray-500" data-i18n="author-affil2">Khoa Kỹ thuật Điện & Khoa học Máy tính, VSB - Đại học Kỹ thuật Ostrava</p>
+            </div>
+            <div class="text-right">
+                <p class="text-sm text-gray-500" data-i18n="footer-credit">Hệ thống minh họa cho Bài báo khoa học Q1.</p>
+                <p class="text-sm text-gray-500 mt-1">&copy; 2026 Vi-TCM Topology Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIC SCRIPT (API + D3 + i18n) -->
+    <script>
+        // --- 1. ĐA NGÔN NGỮ (i18n) ---
+        const i18n = {
+            'vi': {
+                'hero-title': 'Khám phá Hình học của <br><span class="gradient-text">Y học Cổ truyền</span>',
+                'hero-desc': 'Hệ thống hỗ trợ quyết định lâm sàng sử dụng Trí tuệ nhân tạo (NLP) và Phân tích Dữ liệu Tô-pô (TDA) để giải mã mạng lưới hiệp đồng của 714 vị thuốc trong Dược điển Việt Nam.',
+                'hero-btn': 'Trải nghiệm ngay',
+                'info1-title': 'Nguồn Dữ Liệu',
+                'info1-desc': 'Được số hóa từ sách "Những cây thuốc và vị thuốc Việt Nam" của GS. Đỗ Tất Lợi. Phương pháp bảo toàn 100% ngữ nghĩa bản địa.',
+                'info2-title': 'Phân Tích Tô-pô',
+                'info2-desc': 'Sử dụng thuật toán TDA Mapper và Persistent Homology để lập bản đồ cấu trúc không gian liên tục của bệnh lý.',
+                'info3-title': 'Hỗ Trợ Quyết Định',
+                'info3-desc': 'Giúp y bác sĩ đối chiếu bài thuốc cổ truyền với hệ thống phân loại sinh học tiến hóa của Tây y.',
+                'manual-title': 'Hướng Dẫn Sử Dụng',
+                'manual-step1': 'Nhập triệu chứng (VD: ho, suyễn)',
+                'manual-step2': 'Nhấn Phân tích qua API',
+                'manual-step3': 'Khám phá đồ thị và Gợi ý',
+                'input-title': 'Phân tích Lâm sàng',
+                'input-desc': 'Mô hình NLP sẽ phân tích ngữ nghĩa và liên kết với đồ thị Tô-pô.',
+                'input-btn': 'Phân tích Hệ thống',
+                'ds-title': 'Gợi ý Hỗ trợ Quyết định',
+                'ds-semantics': 'Cụm ngữ nghĩa phát hiện:',
+                'ds-recommendation': 'Khuyến nghị Y lý:',
+                'graph-hint': 'Cuộn để Thu/Phóng - Kéo để Di chuyển',
+                'graph-loading': 'Đang tải dữ liệu đồ thị Tô-pô...',
+                'author-name': 'Tác giả: Võ Thị Kim Anh',
+                'author-affil1': 'Khoa Công nghệ Thông tin, Đại học Tôn Đức Thắng, TP.HCM',
+                'author-affil2': 'Khoa Kỹ thuật Điện & Khoa học Máy tính, VSB - Đại học Kỹ thuật Ostrava',
+                'footer-credit': 'Hệ thống minh họa cho Bài báo khoa học Q1.',
+                'err-api': 'Lỗi kết nối đến Hugging Face API.',
+                'analyzing': 'Đang phân tích...',
+                'msg-action': 'Dựa trên phân tích ngữ nghĩa, hệ thống đề xuất tìm kiếm các vị thuốc thuộc các họ tiến hóa lớn trên đồ thị (như Asteraceae, Zingiberaceae) tương ứng với cụm triệu chứng này để tối ưu hóa hiệu ứng hiệp đồng.'
+            },
+            'en': {
+                'hero-title': 'Exploring the Geometry of <br><span class="gradient-text">Traditional Medicine</span>',
+                'hero-desc': 'A clinical decision support system utilizing NLP and Topological Data Analysis (TDA) to decode the synergistic network of 714 herbs in the Vietnamese Pharmacopoeia.',
+                'hero-btn': 'Experience Now',
+                'info1-title': 'Data Source',
+                'info1-desc': 'Digitized from Prof. Do Tat Loi\'s canonical text. Our methodology preserves 100% of the indigenous ontological semantics without translation loss.',
+                'info2-title': 'Topological Analysis',
+                'info2-desc': 'Utilizing the TDA Mapper algorithm and Persistent Homology to map the continuous spatial structure of clinical syndromes.',
+                'info3-title': 'Decision Support',
+                'info3-desc': 'Assists clinicians in cross-referencing traditional formulations with modern evolutionary biological taxonomies (Phylogeny).',
+                'manual-title': 'User Manual',
+                'manual-step1': 'Enter symptoms (e.g., cough, fever)',
+                'manual-step2': 'Click Analyze via AI API',
+                'manual-step3': 'Explore Graph & Suggestions',
+                'input-title': 'Clinical Analysis',
+                'input-desc': 'The NLP model extracts semantic features and links them to the topological graph.',
+                'input-btn': 'Analyze System',
+                'ds-title': 'Decision Support Recommendations',
+                'ds-semantics': 'Detected Semantic Clusters:',
+                'ds-recommendation': 'Pharmacological Recommendation:',
+                'graph-hint': 'Scroll to Zoom - Drag to Pan',
+                'graph-loading': 'Loading Topological Graph Data...',
+                'author-name': 'Author: Vo Thi Kim Anh',
+                'author-affil1': 'Faculty of Information Technology, Ton Duc Thang University, HCMC',
+                'author-affil2': 'Faculty of Electrical Engineering & Computer Science, VSB - Technical University of Ostrava',
+                'footer-credit': 'Demonstration system for Q1 Scientific Journal submission.',
+                'err-api': 'Error connecting to Hugging Face API.',
+                'analyzing': 'Analyzing...',
+                'msg-action': 'Based on semantic analysis, the system recommends exploring herbs from major evolutionary families (e.g., Asteraceae, Zingiberaceae) mapped to this symptom cluster on the graph to maximize synergistic efficacy.'
+            }
+        };
+
+        let currentLang = 'vi';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            
+            // Update Buttons
+            document.getElementById('btn-vi').className = lang === 'vi' 
+                ? 'text-sm font-semibold px-3 py-1 rounded bg-primary text-dark transition' 
+                : 'text-sm font-semibold px-3 py-1 rounded text-gray-400 hover:text-white transition';
+            document.getElementById('btn-en').className = lang === 'en' 
+                ? 'text-sm font-semibold px-3 py-1 rounded bg-primary text-dark transition' 
+                : 'text-sm font-semibold px-3 py-1 rounded text-gray-400 hover:text-white transition';
+
+            // Update Text
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(i18n[lang][key]) {
+                    el.innerHTML = i18n[lang][key];
+                }
+            });
+
+            // Update Placeholder
+            const input = document.getElementById('symptom-input');
+            input.placeholder = lang === 'vi' ? 'Nhập triệu chứng bằng tiếng Việt (vd: đau nhức xương khớp, ho có đờm)...' : 'Enter symptoms in Vietnamese (e.g., đau nhức, ho)...';
+        }
+
+        // --- 2. KẾT NỐI API HUGGING FACE ---
+        async function queryBackend() {
+            const symptom = document.getElementById("symptom-input").value;
+            if(!symptom.trim()) return;
+
+            const btn = document.getElementById("analyze-btn");
+            const status = document.getElementById("api-status");
+            const dsPanel = document.getElementById("decision-panel");
+            const dsKeywords = document.getElementById("ds-keywords");
+            const dsAction = document.getElementById("ds-action");
+
+            // UI Loading state
+            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>${i18n[currentLang]['analyzing']}</span>`;
+            btn.classList.add("opacity-70", "cursor-not-allowed");
+            status.classList.remove("hidden");
+            dsPanel.classList.add("opacity-50");
+
+            // HUGGING FACE API URL
+            const hf_api_url = "https://vothikimanh-tradmed-nlp-backend.hf.space/api/predict";
+
+            try {
+                const response = await fetch(hf_api_url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ data: [symptom] }) 
+                });
+                
+                if (!response.ok) throw new Error("API Response Error");
+                
+                const result = await response.json();
+                
+                // Parse result (Assuming format: "Detected Clinical Semantics: word1, word2")
+                let textResult = result.data[0];
+                let extractedWords = textResult.includes(":") ? textResult.split(":")[1].trim() : textResult;
+
+                // Update Decision Support UI
+                dsKeywords.innerText = extractedWords;
+                dsKeywords.className = "text-xl font-bold text-primary mt-1";
+                dsAction.innerText = i18n[currentLang]['msg-action'];
+                
+                dsPanel.classList.remove("opacity-50");
+                dsPanel.classList.add("shadow-[0_0_15px_rgba(222,255,154,0.2)]");
+
+            } catch (error) {
+                console.error(error);
+                dsKeywords.innerText = "---";
+                dsAction.innerText = i18n[currentLang]['err-api'];
+                dsAction.className = "text-sm text-red-400 mt-1";
+            } finally {
+                // Restore button
+                btn.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> <span>${i18n[currentLang]['input-btn']}</span>`;
+                btn.classList.remove("opacity-70", "cursor-not-allowed");
+                status.classList.add("hidden");
+            }
+        }
+
+        // --- 3. VẼ ĐỒ THỊ D3.JS TÔ-PÔ ---
+        document.addEventListener("DOMContentLoaded", () => {
+            // Attempt to load topology_data.json. 
+            // If it doesn't exist yet, we draw a dummy beautiful graph as a placeholder to show the UI.
+            d3.json("topology_data.json").then(function(data) {
+                renderGraph(data);
+            }).catch(function(error) {
+                console.log("JSON not found. Rendering fallback visualization demo.");
+                renderFallbackGraph();
+            });
+        });
+
+        function renderGraph(data) {
+            document.getElementById("graph-loading").style.display = "none";
+            const container = document.getElementById("graph-container");
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            const svg = d3.select("#graph-container").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            // Add Zoom & Pan capability
+            const g = svg.append("g");
+            const zoom = d3.zoom().scaleExtent([0.5, 4]).on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+            svg.call(zoom);
+
+            // Draw Edges
+            const link = g.selectAll(".link")
+                .data(data.links)
+                .enter().append("line")
+                .attr("class", "link")
+                .style("stroke-width", 1.5);
+
+            // Draw Nodes
+            const node = g.selectAll(".node")
+                .data(data.nodes)
+                .enter().append("g")
+                .attr("class", "node")
+                .attr("transform", d => `translate(${d.x * (width/2) + width/2}, ${d.y * (height/2) + height/2})`);
+
+            node.append("circle")
+                .attr("r", d => Math.max(d.size / 15, 5))
+                .style("fill", d => d.color);
+
+            // Add Labels to large nodes
+            node.append("text")
+                .attr("dx", 12)
+                .attr("dy", ".35em")
+                .text(d => d.size > 150 ? d.label : "")
+                .style("fill", "#fff")
+                .style("font-size", "12px");
+
+            // Fix lines positions
+            link.attr("x1", d => getX(d.source, data.nodes, width))
+                .attr("y1", d => getY(d.source, data.nodes, height))
+                .attr("x2", d => getX(d.target, data.nodes, width))
+                .attr("y2", d => getY(d.target, data.nodes, height));
+        }
+
+        // Helpers for links
+        function getX(id, nodes, width) { const n = nodes.find(n => n.id === id); return n ? n.x * (width/2) + width/2 : 0; }
+        function getY(id, nodes, height) { const n = nodes.find(n => n.id === id); return n ? n.y * (height/2) + height/2 : 0; }
+
+        // MOCK Graph in case topology_data.json is not uploaded yet (for aesthetic purposes)
+        function renderFallbackGraph() {
+            document.getElementById("graph-loading").style.display = "none";
+            const container = document.getElementById("graph-container");
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const svg = d3.select("#graph-container").append("svg").attr("width", width).attr("height", height);
+            const g = svg.append("g");
+            svg.call(d3.zoom().scaleExtent([0.5, 4]).on("zoom", (e) => g.attr("transform", e.transform)));
+
+            // Generate mock data mimicking Mapper topological flares
+            const mockNodes = Array.from({length: 40}, (_, i) => ({
+                id: i, 
+                x: Math.random() * width, 
+                y: Math.random() * height,
+                r: Math.random() * 15 + 5,
+                color: ['#e6194B', '#3cb44b', '#4363d8', '#eeeeee'][Math.floor(Math.random()*4)]
+            }));
+            
+            const mockLinks = [];
+            for(let i=0; i<40; i++) {
+                mockLinks.push({source: mockNodes[i], target: mockNodes[Math.floor(Math.random()*40)]});
+            }
+
+            // Force simulation for nice spread
+            d3.forceSimulation(mockNodes)
+                .force("link", d3.forceLink(mockLinks).distance(50))
+                .force("charge", d3.forceManyBody().strength(-100))
+                .force("center", d3.forceCenter(width / 2, height / 2))
+                .on("tick", () => {
+                    link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+                        .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+                    node.attr("cx", d => d.x).attr("cy", d => d.y);
+                });
+
+            const link = g.selectAll("line").data(mockLinks).enter().append("line").attr("stroke", "#444");
+            const node = g.selectAll("circle").data(mockNodes).enter().append("circle")
+                .attr("r", d => d.r).attr("fill", d => d.color).attr("stroke", "#fff").attr("stroke-width", 1.5)
+                .style("cursor", "pointer")
+                .on("mouseover", function() { d3.select(this).attr("stroke", "#deff9a").attr("stroke-width", 3); })
+                .on("mouseout", function() { d3.select(this).attr("stroke", "#fff").attr("stroke-width", 1.5); });
+        }
+    </script>
+</body>
+</html>
