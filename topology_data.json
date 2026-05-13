@@ -1,0 +1,1803 @@
+{
+    "nodes": [
+        {
+            "id": "cube0_cluster0",
+            "label": "trợ",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": 0.19411968547012026,
+            "y": -0.09344632009860063
+        },
+        {
+            "id": "cube1_cluster0",
+            "label": "trợ",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": 0.454191946247546,
+            "y": -0.044398348880511654
+        },
+        {
+            "id": "cube2_cluster0",
+            "label": "an thần",
+            "family": "Other",
+            "size": 375,
+            "color": "#eeeeee",
+            "x": 0.2520137933431393,
+            "y": -0.0853940886959608
+        },
+        {
+            "id": "cube3_cluster0",
+            "label": "huyết áp",
+            "family": "Other",
+            "size": 375,
+            "color": "#eeeeee",
+            "x": 0.4579996281347961,
+            "y": 0.1463712834760225
+        },
+        {
+            "id": "cube4_cluster0",
+            "label": "máu",
+            "family": "Other",
+            "size": 400,
+            "color": "#eeeeee",
+            "x": 0.20890906845656407,
+            "y": -0.03564337226746445
+        },
+        {
+            "id": "cube5_cluster0",
+            "label": "máu",
+            "family": "Other",
+            "size": 425,
+            "color": "#eeeeee",
+            "x": 0.44297451926903275,
+            "y": 0.08787980491984168
+        },
+        {
+            "id": "cube6_cluster0",
+            "label": "trợ",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": 0.40514043539651134,
+            "y": 0.21568568916770903
+        },
+        {
+            "id": "cube7_cluster0",
+            "label": "kích thích",
+            "family": "Other",
+            "size": 100,
+            "color": "#eeeeee",
+            "x": 0.3467234257060169,
+            "y": -0.011688746779027098
+        },
+        {
+            "id": "cube7_cluster1",
+            "label": "trợ",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": 0.14506628574040545,
+            "y": 0.16662468704606836
+        },
+        {
+            "id": "cube8_cluster0",
+            "label": "kích thích",
+            "family": "Other",
+            "size": 100,
+            "color": "#eeeeee",
+            "x": 0.21763198062957215,
+            "y": 0.270236417443321
+        },
+        {
+            "id": "cube8_cluster1",
+            "label": "sỏi",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": 0.6799030386523469,
+            "y": -0.045365801067744356
+        },
+        {
+            "id": "cube9_cluster1",
+            "label": "phù thũng",
+            "family": "Other",
+            "size": 100,
+            "color": "#eeeeee",
+            "x": 0.6867707984589192,
+            "y": 0.17744860183737443
+        },
+        {
+            "id": "cube9_cluster2",
+            "label": "cao huyết",
+            "family": "Other",
+            "size": 200,
+            "color": "#eeeeee",
+            "x": 0.15428896022185934,
+            "y": 0.2088706929404328
+        },
+        {
+            "id": "cube10_cluster1",
+            "label": "máu",
+            "family": "Other",
+            "size": 325,
+            "color": "#eeeeee",
+            "x": 0.3194406723839802,
+            "y": 0.3219524401619976
+        },
+        {
+            "id": "cube11_cluster0",
+            "label": "kinh",
+            "family": "Apiaceae",
+            "size": 100,
+            "color": "#f58231",
+            "x": -0.5697683664430317,
+            "y": 0.2955617580527496
+        },
+        {
+            "id": "cube11_cluster1",
+            "label": "máu",
+            "family": "Other",
+            "size": 325,
+            "color": "#eeeeee",
+            "x": 0.08538160132724505,
+            "y": 0.19841183720018954
+        },
+        {
+            "id": "cube13_cluster0",
+            "label": "nhuận tràng",
+            "family": "Other",
+            "size": 375,
+            "color": "#eeeeee",
+            "x": 0.2685391507067234,
+            "y": 0.20431453239929256
+        },
+        {
+            "id": "cube14_cluster1",
+            "label": "bổ",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": 0.3039057438931512,
+            "y": 0.16737079941830824
+        },
+        {
+            "id": "cube15_cluster0",
+            "label": "dương",
+            "family": "Other",
+            "size": 200,
+            "color": "#eeeeee",
+            "x": 0.4823642145681906,
+            "y": 0.20437279921108367
+        },
+        {
+            "id": "cube15_cluster1",
+            "label": "bổ",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": 0.048726305353161914,
+            "y": 0.34352314088245933
+        },
+        {
+            "id": "cube16_cluster0",
+            "label": "tiểu",
+            "family": "Other",
+            "size": 425,
+            "color": "#eeeeee",
+            "x": 0.3772278216075975,
+            "y": 0.1423446389995594
+        },
+        {
+            "id": "cube17_cluster0",
+            "label": "lợi",
+            "family": "Other",
+            "size": 650,
+            "color": "#eeeeee",
+            "x": 0.06056974862675132,
+            "y": 0.3410386587119816
+        },
+        {
+            "id": "cube17_cluster1",
+            "label": "phù thũng",
+            "family": "Other",
+            "size": 100,
+            "color": "#eeeeee",
+            "x": 0.4846955233012697,
+            "y": -0.15163448789177608
+        },
+        {
+            "id": "cube18_cluster0",
+            "label": "thủy thũng",
+            "family": "Other",
+            "size": 400,
+            "color": "#eeeeee",
+            "x": -0.26312662354665006,
+            "y": 0.42132769657819874
+        },
+        {
+            "id": "cube19_cluster0",
+            "label": "kinh",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": -0.5432868611994485,
+            "y": 0.5870633599366819
+        },
+        {
+            "id": "cube22_cluster0",
+            "label": "tẩy",
+            "family": "Euphorbiaceae",
+            "size": 175,
+            "color": "#3cb44b",
+            "x": 0.10303747384881926,
+            "y": 0.3085474992768411
+        },
+        {
+            "id": "cube22_cluster1",
+            "label": "nhuận tràng",
+            "family": "Other",
+            "size": 375,
+            "color": "#eeeeee",
+            "x": -0.011615708913173543,
+            "y": 0.3372030945589539
+        },
+        {
+            "id": "cube24_cluster0",
+            "label": "dương",
+            "family": "Other",
+            "size": 350,
+            "color": "#eeeeee",
+            "x": 0.16269553398323794,
+            "y": 0.18955214996004638
+        },
+        {
+            "id": "cube25_cluster0",
+            "label": "lợi tiểu",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": 0.3199874809681687,
+            "y": 0.40774232986503434
+        },
+        {
+            "id": "cube26_cluster0",
+            "label": "thanh nhiệt",
+            "family": "Other",
+            "size": 300,
+            "color": "#eeeeee",
+            "x": 0.18963522184619347,
+            "y": 0.7097506277059706
+        },
+        {
+            "id": "cube26_cluster1",
+            "label": "lợi tiểu",
+            "family": "Other",
+            "size": 400,
+            "color": "#eeeeee",
+            "x": 0.11714590619311034,
+            "y": 0.07958155176501563
+        },
+        {
+            "id": "cube27_cluster0",
+            "label": "giải",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": -0.018325901705983187,
+            "y": 0.8437492556433159
+        },
+        {
+            "id": "cube27_cluster1",
+            "label": "thủy",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.04714876427163742,
+            "y": 0.6502755186475159
+        },
+        {
+            "id": "cube27_cluster2",
+            "label": "độc",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": 0.0717029025242827,
+            "y": 0.3394773615481628
+        },
+        {
+            "id": "cube28_cluster0",
+            "label": "lở loét",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": 0.19520694130394242,
+            "y": 0.5593482682103758
+        },
+        {
+            "id": "cube28_cluster1",
+            "label": "độc",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.22832769491152544,
+            "y": 0.2611964800049685
+        },
+        {
+            "id": "cube29_cluster0",
+            "label": "mụn nhọt",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": -0.08574328390065636,
+            "y": 0.11278830603007321
+        },
+        {
+            "id": "cube29_cluster1",
+            "label": "lở loét",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.00029794467213138903,
+            "y": 0.3338759928529017
+        },
+        {
+            "id": "cube30_cluster0",
+            "label": "mụn nhọt",
+            "family": "Other",
+            "size": 575,
+            "color": "#eeeeee",
+            "x": -0.33977072845450595,
+            "y": 0.24315196874304448
+        },
+        {
+            "id": "cube31_cluster0",
+            "label": "cắn mụn",
+            "family": "Other",
+            "size": 325,
+            "color": "#eeeeee",
+            "x": -0.6368766753377078,
+            "y": 0.05625293633085156
+        },
+        {
+            "id": "cube32_cluster0",
+            "label": "tẩy",
+            "family": "Euphorbiaceae",
+            "size": 175,
+            "color": "#3cb44b",
+            "x": -0.2023185038555789,
+            "y": 0.25466198496207965
+        },
+        {
+            "id": "cube32_cluster1",
+            "label": "táo bón",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": -0.06733396951679947,
+            "y": 0.3406489426535786
+        },
+        {
+            "id": "cube33_cluster0",
+            "label": "táo bón",
+            "family": "Other",
+            "size": 100,
+            "color": "#eeeeee",
+            "x": -0.31266762455435954,
+            "y": 0.15102470549960595
+        },
+        {
+            "id": "cube33_cluster1",
+            "label": "tê thấp",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.24518468919206218,
+            "y": 0.47499862779710866
+        },
+        {
+            "id": "cube34_cluster0",
+            "label": "tê thấp",
+            "family": "Other",
+            "size": 775,
+            "color": "#eeeeee",
+            "x": -0.18333936034862777,
+            "y": 0.17350138871865547
+        },
+        {
+            "id": "cube35_cluster0",
+            "label": "đau nhức",
+            "family": "Other",
+            "size": 400,
+            "color": "#eeeeee",
+            "x": -0.4546162066782141,
+            "y": -0.101045717118888
+        },
+        {
+            "id": "cube36_cluster0",
+            "label": "thanh nhiệt",
+            "family": "Other",
+            "size": 400,
+            "color": "#eeeeee",
+            "x": -0.010397041555675465,
+            "y": 0.4616817530120738
+        },
+        {
+            "id": "cube37_cluster0",
+            "label": "giải",
+            "family": "Other",
+            "size": 325,
+            "color": "#eeeeee",
+            "x": -0.1422034252592057,
+            "y": 0.5740254249540179
+        },
+        {
+            "id": "cube38_cluster0",
+            "label": "lở",
+            "family": "Other",
+            "size": 375,
+            "color": "#eeeeee",
+            "x": -0.02292073237538357,
+            "y": 0.7116395873179298
+        },
+        {
+            "id": "cube39_cluster0",
+            "label": "lở",
+            "family": "Other",
+            "size": 350,
+            "color": "#eeeeee",
+            "x": -0.16859248271695285,
+            "y": 0.45651465914411576
+        },
+        {
+            "id": "cube39_cluster1",
+            "label": "mụn nhọt",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": -0.5283726382094122,
+            "y": 0.28296981141924815
+        },
+        {
+            "id": "cube40_cluster0",
+            "label": "cắn",
+            "family": "Other",
+            "size": 850,
+            "color": "#eeeeee",
+            "x": -0.2704729597450618,
+            "y": 0.054861764416851054
+        },
+        {
+            "id": "cube41_cluster0",
+            "label": "cắn",
+            "family": "Other",
+            "size": 600,
+            "color": "#eeeeee",
+            "x": -0.44310713068069635,
+            "y": -0.12993259587341888
+        },
+        {
+            "id": "cube43_cluster1",
+            "label": "tiêu chảy",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": -0.8687583876257269,
+            "y": 0.042647270138821566
+        },
+        {
+            "id": "cube43_cluster2",
+            "label": "tê thấp",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": -0.47909309572068015,
+            "y": 0.421460136781259
+        },
+        {
+            "id": "cube44_cluster0",
+            "label": "tê thấp",
+            "family": "Other",
+            "size": 575,
+            "color": "#eeeeee",
+            "x": -0.43014620907066986,
+            "y": 0.16193579975458666
+        },
+        {
+            "id": "cube45_cluster0",
+            "label": "đau nhức",
+            "family": "Other",
+            "size": 450,
+            "color": "#eeeeee",
+            "x": -0.21673427765196465,
+            "y": -0.1324458850998702
+        },
+        {
+            "id": "cube45_cluster1",
+            "label": "tự",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": -0.18615380631795958,
+            "y": 0.06746910678663355
+        },
+        {
+            "id": "cube46_cluster0",
+            "label": "tự",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.43333067212157983,
+            "y": -0.02713155053614049
+        },
+        {
+            "id": "cube46_cluster2",
+            "label": "hen",
+            "family": "Other",
+            "size": 200,
+            "color": "#eeeeee",
+            "x": -0.3699617435611093,
+            "y": 0.4462958489671309
+        },
+        {
+            "id": "cube47_cluster1",
+            "label": "tỳ",
+            "family": "Asteraceae",
+            "size": 100,
+            "color": "#e6194B",
+            "x": -0.31549094378756165,
+            "y": -0.01609859338917389
+        },
+        {
+            "id": "cube47_cluster2",
+            "label": "hen",
+            "family": "Other",
+            "size": 325,
+            "color": "#eeeeee",
+            "x": -0.26202986400031114,
+            "y": 0.20793118217570775
+        },
+        {
+            "id": "cube48_cluster1",
+            "label": "tiêu",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": -0.2670789103264311,
+            "y": -0.8293974862737757
+        },
+        {
+            "id": "cube48_cluster2",
+            "label": "dày",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.13636359872732368,
+            "y": -0.13792678049725998
+        },
+        {
+            "id": "cube49_cluster0",
+            "label": "giúp tiêu",
+            "family": "Other",
+            "size": 100,
+            "color": "#eeeeee",
+            "x": -0.3741516246092543,
+            "y": -0.616188033894078
+        },
+        {
+            "id": "cube50_cluster0",
+            "label": "rắn cắn",
+            "family": "Other",
+            "size": 200,
+            "color": "#eeeeee",
+            "x": -0.33687964463397063,
+            "y": -0.3139539770420335
+        },
+        {
+            "id": "cube51_cluster0",
+            "label": "rắn cắn",
+            "family": "Other",
+            "size": 375,
+            "color": "#eeeeee",
+            "x": -0.10221626703924336,
+            "y": -0.2551084275763568
+        },
+        {
+            "id": "cube52_cluster0",
+            "label": "tiêu chảy",
+            "family": "Other",
+            "size": 325,
+            "color": "#eeeeee",
+            "x": -0.8791340703409685,
+            "y": -0.2593158071992091
+        },
+        {
+            "id": "cube53_cluster0",
+            "label": "tiêu chảy",
+            "family": "Other",
+            "size": 475,
+            "color": "#eeeeee",
+            "x": -0.6056149959619739,
+            "y": -0.17593712641539896
+        },
+        {
+            "id": "cube54_cluster0",
+            "label": "amip",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.26559898648451047,
+            "y": -0.16459852271071063
+        },
+        {
+            "id": "cube55_cluster0",
+            "label": "ruột đau",
+            "family": "Menispermaceae",
+            "size": 100,
+            "color": "#fffac8",
+            "x": -0.25343323033458875,
+            "y": -0.18002676859939973
+        },
+        {
+            "id": "cube55_cluster1",
+            "label": "răng",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": -0.8545483933855741,
+            "y": 0.5430543061916263
+        },
+        {
+            "id": "cube55_cluster2",
+            "label": "tự",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": -0.3387156543730335,
+            "y": -0.2743141579320196
+        },
+        {
+            "id": "cube56_cluster0",
+            "label": "nhức đầu",
+            "family": "Other",
+            "size": 200,
+            "color": "#eeeeee",
+            "x": 0.633663909033018,
+            "y": -0.8223796279019893
+        },
+        {
+            "id": "cube56_cluster2",
+            "label": "răng",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": -0.6402751796456819,
+            "y": 0.2944129270526353
+        },
+        {
+            "id": "cube56_cluster3",
+            "label": "tự",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.09154632411431987,
+            "y": -0.17969014527177735
+        },
+        {
+            "id": "cube57_cluster0",
+            "label": "nhức đầu",
+            "family": "Lamiaceae",
+            "size": 250,
+            "color": "#911eb4",
+            "x": 0.36781607359535085,
+            "y": -0.705929270732941
+        },
+        {
+            "id": "cube57_cluster1",
+            "label": "tiêu",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": -0.03496278840234396,
+            "y": -0.9101694608649639
+        },
+        {
+            "id": "cube57_cluster2",
+            "label": "tỳ",
+            "family": "Asteraceae",
+            "size": 100,
+            "color": "#e6194B",
+            "x": -0.14978047110055756,
+            "y": -0.2781782417553646
+        },
+        {
+            "id": "cube58_cluster0",
+            "label": "tiêu",
+            "family": "Other",
+            "size": 850,
+            "color": "#eeeeee",
+            "x": -0.005349236520722275,
+            "y": -0.5172067546204187
+        },
+        {
+            "id": "cube59_cluster0",
+            "label": "giúp tiêu",
+            "family": "Other",
+            "size": 475,
+            "color": "#eeeeee",
+            "x": -0.14624733634524248,
+            "y": -0.6326113493493123
+        },
+        {
+            "id": "cube60_cluster0",
+            "label": "giun",
+            "family": "Other",
+            "size": 275,
+            "color": "#eeeeee",
+            "x": -0.10273918282103071,
+            "y": -0.1584044135650416
+        },
+        {
+            "id": "cube61_cluster0",
+            "label": "giun",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": -0.0498179449705494,
+            "y": -0.41772218737868944
+        },
+        {
+            "id": "cube61_cluster1",
+            "label": "duốc",
+            "family": "Papilionaceae",
+            "size": 125,
+            "color": "#ffe119",
+            "x": 0.08248902190703086,
+            "y": -0.5370841442909705
+        },
+        {
+            "id": "cube62_cluster0",
+            "label": "lỵ tiêu",
+            "family": "Other",
+            "size": 100,
+            "color": "#eeeeee",
+            "x": -0.8089852080784399,
+            "y": -0.5119720607026685
+        },
+        {
+            "id": "cube63_cluster0",
+            "label": "lỵ tiêu",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": -0.5385372569876206,
+            "y": -0.4145669531358523
+        },
+        {
+            "id": "cube63_cluster1",
+            "label": "lỵ",
+            "family": "Other",
+            "size": 200,
+            "color": "#eeeeee",
+            "x": -0.15920345504100766,
+            "y": -0.30776926009538313
+        },
+        {
+            "id": "cube64_cluster0",
+            "label": "ho viêm",
+            "family": "Other",
+            "size": 300,
+            "color": "#eeeeee",
+            "x": -0.2610701326817534,
+            "y": -0.2139283367610041
+        },
+        {
+            "id": "cube64_cluster1",
+            "label": "lỵ amip",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": 0.00700428270487749,
+            "y": -0.31235928214546793
+        },
+        {
+            "id": "cube64_cluster2",
+            "label": "lỵ",
+            "family": "Other",
+            "size": 200,
+            "color": "#eeeeee",
+            "x": 0.15084351349706265,
+            "y": -0.3118771640077975
+        },
+        {
+            "id": "cube65_cluster0",
+            "label": "viêm họng",
+            "family": "Other",
+            "size": 400,
+            "color": "#eeeeee",
+            "x": 0.032141238174127035,
+            "y": -0.3264013140596438
+        },
+        {
+            "id": "cube65_cluster1",
+            "label": "răng",
+            "family": "Other",
+            "size": 300,
+            "color": "#eeeeee",
+            "x": -0.9999999999999999,
+            "y": 0.3942866754042707
+        },
+        {
+            "id": "cube66_cluster0",
+            "label": "sốt nhức",
+            "family": "Lamiaceae",
+            "size": 225,
+            "color": "#911eb4",
+            "x": 0.7033924131238467,
+            "y": -0.575538373786765
+        },
+        {
+            "id": "cube66_cluster1",
+            "label": "răng",
+            "family": "Other",
+            "size": 250,
+            "color": "#eeeeee",
+            "x": -0.9429864928389229,
+            "y": 0.19776786835394375
+        },
+        {
+            "id": "cube66_cluster2",
+            "label": "sốt đau",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": 0.6456043933183783,
+            "y": -0.649803674732566
+        },
+        {
+            "id": "cube66_cluster3",
+            "label": "ho cảm",
+            "family": "Lamiaceae",
+            "size": 125,
+            "color": "#911eb4",
+            "x": 0.19875252123735684,
+            "y": -0.4675952201105738
+        },
+        {
+            "id": "cube67_cluster0",
+            "label": "nhức đầu",
+            "family": "Lamiaceae",
+            "size": 275,
+            "color": "#911eb4",
+            "x": 0.3955115684059722,
+            "y": -0.5176701969096189
+        },
+        {
+            "id": "cube67_cluster1",
+            "label": "sốt đau",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": 0.45944980859181,
+            "y": -0.6798364599000588
+        },
+        {
+            "id": "cube67_cluster2",
+            "label": "cúm",
+            "family": "Asteraceae",
+            "size": 100,
+            "color": "#e6194B",
+            "x": -0.02188577113561678,
+            "y": -0.4102787983564609
+        },
+        {
+            "id": "cube68_cluster0",
+            "label": "giúp tiêu",
+            "family": "Zingiberaceae",
+            "size": 375,
+            "color": "#42d4f4",
+            "x": 0.14869861439540985,
+            "y": -0.7037098665948104
+        },
+        {
+            "id": "cube69_cluster0",
+            "label": "nôn mửa",
+            "family": "Zingiberaceae",
+            "size": 225,
+            "color": "#42d4f4",
+            "x": 0.13982246378743474,
+            "y": -0.38636111250797256
+        },
+        {
+            "id": "cube70_cluster0",
+            "label": "giun",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": 0.2095075285388899,
+            "y": -0.36478450468101375
+        },
+        {
+            "id": "cube71_cluster0",
+            "label": "sán",
+            "family": "Other",
+            "size": 125,
+            "color": "#eeeeee",
+            "x": 0.15655845355139938,
+            "y": -0.10547305128640874
+        },
+        {
+            "id": "cube73_cluster0",
+            "label": "ho",
+            "family": "Other",
+            "size": 475,
+            "color": "#eeeeee",
+            "x": -0.05408802099562694,
+            "y": 0.019843197319426187
+        },
+        {
+            "id": "cube74_cluster0",
+            "label": "ho",
+            "family": "Other",
+            "size": 750,
+            "color": "#eeeeee",
+            "x": 0.11359589844706981,
+            "y": -0.14028832308223488
+        },
+        {
+            "id": "cube75_cluster0",
+            "label": "sốt",
+            "family": "Other",
+            "size": 525,
+            "color": "#eeeeee",
+            "x": 0.425061871103747,
+            "y": -0.31978013988524034
+        },
+        {
+            "id": "cube75_cluster1",
+            "label": "sốt",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": 0.7516003916617244,
+            "y": 0.3196898090708394
+        },
+        {
+            "id": "cube76_cluster0",
+            "label": "sốt đau",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": 0.7024314189769756,
+            "y": -0.4701059178064399
+        },
+        {
+            "id": "cube76_cluster1",
+            "label": "sốt rét",
+            "family": "Other",
+            "size": 325,
+            "color": "#eeeeee",
+            "x": 0.20501443021793248,
+            "y": -0.18211620009975124
+        },
+        {
+            "id": "cube76_cluster2",
+            "label": "sốt",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": 0.9435880539531176,
+            "y": 0.019303892376183827
+        },
+        {
+            "id": "cube77_cluster0",
+            "label": "sốt rét",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": 0.48298406694637325,
+            "y": -0.17268204544699553
+        },
+        {
+            "id": "cube79_cluster1",
+            "label": "đờm",
+            "family": "Other",
+            "size": 150,
+            "color": "#eeeeee",
+            "x": 0.07558964214736924,
+            "y": 0.24016885437302252
+        },
+        {
+            "id": "cube80_cluster0",
+            "label": "ho",
+            "family": "Other",
+            "size": 525,
+            "color": "#eeeeee",
+            "x": 0.2905847456688497,
+            "y": 0.13256375494019854
+        },
+        {
+            "id": "cube81_cluster0",
+            "label": "sốt",
+            "family": "Other",
+            "size": 600,
+            "color": "#eeeeee",
+            "x": 0.6182271570299265,
+            "y": 0.012511084070223544
+        },
+        {
+            "id": "cube82_cluster0",
+            "label": "sốt rét",
+            "family": "Other",
+            "size": 250,
+            "color": "#eeeeee",
+            "x": 0.4648107705937448,
+            "y": 0.07900566070443078
+        },
+        {
+            "id": "cube82_cluster1",
+            "label": "sốt",
+            "family": "Other",
+            "size": 175,
+            "color": "#eeeeee",
+            "x": 0.9249509237181209,
+            "y": 0.2196090315909799
+        },
+        {
+            "id": "cube83_cluster0",
+            "label": "sốt rét",
+            "family": "Other",
+            "size": 225,
+            "color": "#eeeeee",
+            "x": 0.2130335133087812,
+            "y": 0.09588921219147634
+        }
+    ],
+    "links": [
+        {
+            "source": "cube0_cluster0",
+            "target": "cube1_cluster0"
+        },
+        {
+            "source": "cube0_cluster0",
+            "target": "cube6_cluster0"
+        },
+        {
+            "source": "cube0_cluster0",
+            "target": "cube7_cluster1"
+        },
+        {
+            "source": "cube1_cluster0",
+            "target": "cube6_cluster0"
+        },
+        {
+            "source": "cube1_cluster0",
+            "target": "cube7_cluster1"
+        },
+        {
+            "source": "cube2_cluster0",
+            "target": "cube3_cluster0"
+        },
+        {
+            "source": "cube2_cluster0",
+            "target": "cube9_cluster2"
+        },
+        {
+            "source": "cube3_cluster0",
+            "target": "cube9_cluster2"
+        },
+        {
+            "source": "cube4_cluster0",
+            "target": "cube5_cluster0"
+        },
+        {
+            "source": "cube4_cluster0",
+            "target": "cube10_cluster1"
+        },
+        {
+            "source": "cube4_cluster0",
+            "target": "cube11_cluster1"
+        },
+        {
+            "source": "cube5_cluster0",
+            "target": "cube10_cluster1"
+        },
+        {
+            "source": "cube5_cluster0",
+            "target": "cube11_cluster1"
+        },
+        {
+            "source": "cube6_cluster0",
+            "target": "cube7_cluster1"
+        },
+        {
+            "source": "cube7_cluster0",
+            "target": "cube8_cluster0"
+        },
+        {
+            "source": "cube8_cluster1",
+            "target": "cube9_cluster1"
+        },
+        {
+            "source": "cube8_cluster1",
+            "target": "cube16_cluster0"
+        },
+        {
+            "source": "cube8_cluster1",
+            "target": "cube17_cluster1"
+        },
+        {
+            "source": "cube9_cluster1",
+            "target": "cube16_cluster0"
+        },
+        {
+            "source": "cube9_cluster1",
+            "target": "cube17_cluster1"
+        },
+        {
+            "source": "cube10_cluster1",
+            "target": "cube11_cluster1"
+        },
+        {
+            "source": "cube11_cluster0",
+            "target": "cube18_cluster0"
+        },
+        {
+            "source": "cube11_cluster0",
+            "target": "cube19_cluster0"
+        },
+        {
+            "source": "cube13_cluster0",
+            "target": "cube22_cluster1"
+        },
+        {
+            "source": "cube14_cluster1",
+            "target": "cube15_cluster1"
+        },
+        {
+            "source": "cube15_cluster0",
+            "target": "cube24_cluster0"
+        },
+        {
+            "source": "cube16_cluster0",
+            "target": "cube17_cluster0"
+        },
+        {
+            "source": "cube16_cluster0",
+            "target": "cube17_cluster1"
+        },
+        {
+            "source": "cube16_cluster0",
+            "target": "cube25_cluster0"
+        },
+        {
+            "source": "cube16_cluster0",
+            "target": "cube26_cluster1"
+        },
+        {
+            "source": "cube17_cluster0",
+            "target": "cube18_cluster0"
+        },
+        {
+            "source": "cube17_cluster0",
+            "target": "cube25_cluster0"
+        },
+        {
+            "source": "cube17_cluster0",
+            "target": "cube26_cluster1"
+        },
+        {
+            "source": "cube17_cluster0",
+            "target": "cube27_cluster1"
+        },
+        {
+            "source": "cube18_cluster0",
+            "target": "cube19_cluster0"
+        },
+        {
+            "source": "cube18_cluster0",
+            "target": "cube27_cluster1"
+        },
+        {
+            "source": "cube22_cluster0",
+            "target": "cube32_cluster0"
+        },
+        {
+            "source": "cube24_cluster0",
+            "target": "cube34_cluster0"
+        },
+        {
+            "source": "cube25_cluster0",
+            "target": "cube26_cluster1"
+        },
+        {
+            "source": "cube26_cluster0",
+            "target": "cube27_cluster0"
+        },
+        {
+            "source": "cube26_cluster0",
+            "target": "cube36_cluster0"
+        },
+        {
+            "source": "cube26_cluster0",
+            "target": "cube37_cluster0"
+        },
+        {
+            "source": "cube27_cluster0",
+            "target": "cube36_cluster0"
+        },
+        {
+            "source": "cube27_cluster0",
+            "target": "cube37_cluster0"
+        },
+        {
+            "source": "cube27_cluster2",
+            "target": "cube28_cluster1"
+        },
+        {
+            "source": "cube28_cluster0",
+            "target": "cube29_cluster1"
+        },
+        {
+            "source": "cube28_cluster0",
+            "target": "cube38_cluster0"
+        },
+        {
+            "source": "cube28_cluster0",
+            "target": "cube39_cluster0"
+        },
+        {
+            "source": "cube29_cluster0",
+            "target": "cube30_cluster0"
+        },
+        {
+            "source": "cube29_cluster0",
+            "target": "cube39_cluster1"
+        },
+        {
+            "source": "cube29_cluster0",
+            "target": "cube40_cluster0"
+        },
+        {
+            "source": "cube29_cluster1",
+            "target": "cube30_cluster0"
+        },
+        {
+            "source": "cube29_cluster1",
+            "target": "cube38_cluster0"
+        },
+        {
+            "source": "cube29_cluster1",
+            "target": "cube39_cluster0"
+        },
+        {
+            "source": "cube29_cluster1",
+            "target": "cube40_cluster0"
+        },
+        {
+            "source": "cube30_cluster0",
+            "target": "cube31_cluster0"
+        },
+        {
+            "source": "cube30_cluster0",
+            "target": "cube39_cluster0"
+        },
+        {
+            "source": "cube30_cluster0",
+            "target": "cube39_cluster1"
+        },
+        {
+            "source": "cube30_cluster0",
+            "target": "cube40_cluster0"
+        },
+        {
+            "source": "cube30_cluster0",
+            "target": "cube41_cluster0"
+        },
+        {
+            "source": "cube31_cluster0",
+            "target": "cube40_cluster0"
+        },
+        {
+            "source": "cube31_cluster0",
+            "target": "cube41_cluster0"
+        },
+        {
+            "source": "cube32_cluster1",
+            "target": "cube33_cluster0"
+        },
+        {
+            "source": "cube33_cluster1",
+            "target": "cube34_cluster0"
+        },
+        {
+            "source": "cube33_cluster1",
+            "target": "cube43_cluster2"
+        },
+        {
+            "source": "cube33_cluster1",
+            "target": "cube44_cluster0"
+        },
+        {
+            "source": "cube34_cluster0",
+            "target": "cube35_cluster0"
+        },
+        {
+            "source": "cube34_cluster0",
+            "target": "cube43_cluster2"
+        },
+        {
+            "source": "cube34_cluster0",
+            "target": "cube44_cluster0"
+        },
+        {
+            "source": "cube34_cluster0",
+            "target": "cube45_cluster0"
+        },
+        {
+            "source": "cube35_cluster0",
+            "target": "cube44_cluster0"
+        },
+        {
+            "source": "cube35_cluster0",
+            "target": "cube45_cluster0"
+        },
+        {
+            "source": "cube36_cluster0",
+            "target": "cube37_cluster0"
+        },
+        {
+            "source": "cube36_cluster0",
+            "target": "cube46_cluster2"
+        },
+        {
+            "source": "cube36_cluster0",
+            "target": "cube47_cluster2"
+        },
+        {
+            "source": "cube37_cluster0",
+            "target": "cube46_cluster2"
+        },
+        {
+            "source": "cube37_cluster0",
+            "target": "cube47_cluster2"
+        },
+        {
+            "source": "cube38_cluster0",
+            "target": "cube39_cluster0"
+        },
+        {
+            "source": "cube39_cluster0",
+            "target": "cube40_cluster0"
+        },
+        {
+            "source": "cube39_cluster1",
+            "target": "cube40_cluster0"
+        },
+        {
+            "source": "cube40_cluster0",
+            "target": "cube41_cluster0"
+        },
+        {
+            "source": "cube40_cluster0",
+            "target": "cube50_cluster0"
+        },
+        {
+            "source": "cube40_cluster0",
+            "target": "cube51_cluster0"
+        },
+        {
+            "source": "cube41_cluster0",
+            "target": "cube50_cluster0"
+        },
+        {
+            "source": "cube41_cluster0",
+            "target": "cube51_cluster0"
+        },
+        {
+            "source": "cube43_cluster1",
+            "target": "cube52_cluster0"
+        },
+        {
+            "source": "cube43_cluster1",
+            "target": "cube53_cluster0"
+        },
+        {
+            "source": "cube43_cluster2",
+            "target": "cube44_cluster0"
+        },
+        {
+            "source": "cube44_cluster0",
+            "target": "cube45_cluster0"
+        },
+        {
+            "source": "cube45_cluster1",
+            "target": "cube46_cluster0"
+        },
+        {
+            "source": "cube45_cluster1",
+            "target": "cube55_cluster2"
+        },
+        {
+            "source": "cube45_cluster1",
+            "target": "cube56_cluster3"
+        },
+        {
+            "source": "cube46_cluster0",
+            "target": "cube55_cluster2"
+        },
+        {
+            "source": "cube46_cluster0",
+            "target": "cube56_cluster3"
+        },
+        {
+            "source": "cube46_cluster2",
+            "target": "cube47_cluster2"
+        },
+        {
+            "source": "cube46_cluster2",
+            "target": "cube56_cluster2"
+        },
+        {
+            "source": "cube47_cluster1",
+            "target": "cube57_cluster2"
+        },
+        {
+            "source": "cube47_cluster2",
+            "target": "cube48_cluster2"
+        },
+        {
+            "source": "cube47_cluster2",
+            "target": "cube56_cluster2"
+        },
+        {
+            "source": "cube48_cluster1",
+            "target": "cube49_cluster0"
+        },
+        {
+            "source": "cube48_cluster1",
+            "target": "cube57_cluster1"
+        },
+        {
+            "source": "cube48_cluster1",
+            "target": "cube58_cluster0"
+        },
+        {
+            "source": "cube48_cluster1",
+            "target": "cube59_cluster0"
+        },
+        {
+            "source": "cube48_cluster2",
+            "target": "cube58_cluster0"
+        },
+        {
+            "source": "cube49_cluster0",
+            "target": "cube58_cluster0"
+        },
+        {
+            "source": "cube49_cluster0",
+            "target": "cube59_cluster0"
+        },
+        {
+            "source": "cube50_cluster0",
+            "target": "cube51_cluster0"
+        },
+        {
+            "source": "cube51_cluster0",
+            "target": "cube61_cluster1"
+        },
+        {
+            "source": "cube52_cluster0",
+            "target": "cube53_cluster0"
+        },
+        {
+            "source": "cube52_cluster0",
+            "target": "cube62_cluster0"
+        },
+        {
+            "source": "cube52_cluster0",
+            "target": "cube63_cluster0"
+        },
+        {
+            "source": "cube53_cluster0",
+            "target": "cube62_cluster0"
+        },
+        {
+            "source": "cube53_cluster0",
+            "target": "cube63_cluster0"
+        },
+        {
+            "source": "cube53_cluster0",
+            "target": "cube64_cluster0"
+        },
+        {
+            "source": "cube54_cluster0",
+            "target": "cube64_cluster1"
+        },
+        {
+            "source": "cube55_cluster1",
+            "target": "cube56_cluster2"
+        },
+        {
+            "source": "cube55_cluster1",
+            "target": "cube65_cluster1"
+        },
+        {
+            "source": "cube55_cluster1",
+            "target": "cube66_cluster1"
+        },
+        {
+            "source": "cube55_cluster2",
+            "target": "cube56_cluster3"
+        },
+        {
+            "source": "cube56_cluster0",
+            "target": "cube57_cluster0"
+        },
+        {
+            "source": "cube56_cluster0",
+            "target": "cube66_cluster0"
+        },
+        {
+            "source": "cube56_cluster0",
+            "target": "cube67_cluster0"
+        },
+        {
+            "source": "cube56_cluster2",
+            "target": "cube65_cluster1"
+        },
+        {
+            "source": "cube56_cluster2",
+            "target": "cube66_cluster1"
+        },
+        {
+            "source": "cube57_cluster0",
+            "target": "cube58_cluster0"
+        },
+        {
+            "source": "cube57_cluster0",
+            "target": "cube66_cluster0"
+        },
+        {
+            "source": "cube57_cluster0",
+            "target": "cube67_cluster0"
+        },
+        {
+            "source": "cube57_cluster0",
+            "target": "cube68_cluster0"
+        },
+        {
+            "source": "cube57_cluster1",
+            "target": "cube58_cluster0"
+        },
+        {
+            "source": "cube57_cluster1",
+            "target": "cube68_cluster0"
+        },
+        {
+            "source": "cube58_cluster0",
+            "target": "cube59_cluster0"
+        },
+        {
+            "source": "cube58_cluster0",
+            "target": "cube67_cluster0"
+        },
+        {
+            "source": "cube58_cluster0",
+            "target": "cube68_cluster0"
+        },
+        {
+            "source": "cube58_cluster0",
+            "target": "cube69_cluster0"
+        },
+        {
+            "source": "cube59_cluster0",
+            "target": "cube68_cluster0"
+        },
+        {
+            "source": "cube59_cluster0",
+            "target": "cube69_cluster0"
+        },
+        {
+            "source": "cube60_cluster0",
+            "target": "cube61_cluster0"
+        },
+        {
+            "source": "cube60_cluster0",
+            "target": "cube70_cluster0"
+        },
+        {
+            "source": "cube60_cluster0",
+            "target": "cube71_cluster0"
+        },
+        {
+            "source": "cube61_cluster0",
+            "target": "cube70_cluster0"
+        },
+        {
+            "source": "cube61_cluster0",
+            "target": "cube71_cluster0"
+        },
+        {
+            "source": "cube62_cluster0",
+            "target": "cube63_cluster0"
+        },
+        {
+            "source": "cube63_cluster0",
+            "target": "cube64_cluster0"
+        },
+        {
+            "source": "cube63_cluster1",
+            "target": "cube64_cluster2"
+        },
+        {
+            "source": "cube64_cluster0",
+            "target": "cube65_cluster0"
+        },
+        {
+            "source": "cube64_cluster0",
+            "target": "cube73_cluster0"
+        },
+        {
+            "source": "cube64_cluster0",
+            "target": "cube74_cluster0"
+        },
+        {
+            "source": "cube65_cluster0",
+            "target": "cube66_cluster3"
+        },
+        {
+            "source": "cube65_cluster0",
+            "target": "cube73_cluster0"
+        },
+        {
+            "source": "cube65_cluster0",
+            "target": "cube74_cluster0"
+        },
+        {
+            "source": "cube65_cluster0",
+            "target": "cube75_cluster0"
+        },
+        {
+            "source": "cube65_cluster1",
+            "target": "cube66_cluster1"
+        },
+        {
+            "source": "cube66_cluster0",
+            "target": "cube67_cluster0"
+        },
+        {
+            "source": "cube66_cluster2",
+            "target": "cube67_cluster1"
+        },
+        {
+            "source": "cube66_cluster2",
+            "target": "cube75_cluster0"
+        },
+        {
+            "source": "cube66_cluster2",
+            "target": "cube76_cluster0"
+        },
+        {
+            "source": "cube66_cluster3",
+            "target": "cube74_cluster0"
+        },
+        {
+            "source": "cube66_cluster3",
+            "target": "cube75_cluster0"
+        },
+        {
+            "source": "cube67_cluster0",
+            "target": "cube68_cluster0"
+        },
+        {
+            "source": "cube67_cluster1",
+            "target": "cube75_cluster0"
+        },
+        {
+            "source": "cube67_cluster1",
+            "target": "cube76_cluster0"
+        },
+        {
+            "source": "cube67_cluster2",
+            "target": "cube76_cluster1"
+        },
+        {
+            "source": "cube68_cluster0",
+            "target": "cube69_cluster0"
+        },
+        {
+            "source": "cube70_cluster0",
+            "target": "cube71_cluster0"
+        },
+        {
+            "source": "cube73_cluster0",
+            "target": "cube74_cluster0"
+        },
+        {
+            "source": "cube73_cluster0",
+            "target": "cube79_cluster1"
+        },
+        {
+            "source": "cube73_cluster0",
+            "target": "cube80_cluster0"
+        },
+        {
+            "source": "cube74_cluster0",
+            "target": "cube75_cluster0"
+        },
+        {
+            "source": "cube74_cluster0",
+            "target": "cube79_cluster1"
+        },
+        {
+            "source": "cube74_cluster0",
+            "target": "cube80_cluster0"
+        },
+        {
+            "source": "cube75_cluster0",
+            "target": "cube76_cluster0"
+        },
+        {
+            "source": "cube75_cluster0",
+            "target": "cube81_cluster0"
+        },
+        {
+            "source": "cube75_cluster1",
+            "target": "cube76_cluster2"
+        },
+        {
+            "source": "cube75_cluster1",
+            "target": "cube81_cluster0"
+        },
+        {
+            "source": "cube75_cluster1",
+            "target": "cube82_cluster1"
+        },
+        {
+            "source": "cube76_cluster1",
+            "target": "cube77_cluster0"
+        },
+        {
+            "source": "cube76_cluster1",
+            "target": "cube82_cluster0"
+        },
+        {
+            "source": "cube76_cluster1",
+            "target": "cube83_cluster0"
+        },
+        {
+            "source": "cube76_cluster2",
+            "target": "cube81_cluster0"
+        },
+        {
+            "source": "cube76_cluster2",
+            "target": "cube82_cluster1"
+        },
+        {
+            "source": "cube77_cluster0",
+            "target": "cube82_cluster0"
+        },
+        {
+            "source": "cube77_cluster0",
+            "target": "cube83_cluster0"
+        },
+        {
+            "source": "cube79_cluster1",
+            "target": "cube80_cluster0"
+        },
+        {
+            "source": "cube80_cluster0",
+            "target": "cube81_cluster0"
+        },
+        {
+            "source": "cube81_cluster0",
+            "target": "cube82_cluster1"
+        },
+        {
+            "source": "cube82_cluster0",
+            "target": "cube83_cluster0"
+        }
+    ]
+}
