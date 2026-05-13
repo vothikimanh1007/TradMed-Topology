@@ -303,8 +303,8 @@
 
             // URL CHÍNH XÁC CỦA HUGGING FACE API
             // Lưu ý: Viết thường toàn bộ, dùng dấu gạch ngang, đuôi .hf.space
-            const hf_api_url = "https://vothikimanh-tradmed-nlp-backend.hf.space/api/predict";
-
+            
+            const hf_api_url = "https://vothikimanh-tradmed-nlp-backend.hf.space/run/predict";
             try {
                 const response = await fetch(hf_api_url, {
                     method: "POST",
