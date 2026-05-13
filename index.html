@@ -283,6 +283,7 @@
         }
 
         // --- 2. KẾT NỐI API HUGGING FACE ---
+        // --- KẾT NỐI API HUGGING FACE ĐÃ SỬA LỖI ---
         async function queryBackend() {
             const symptom = document.getElementById("symptom-input").value;
             if(!symptom.trim()) return;
@@ -293,13 +294,15 @@
             const dsKeywords = document.getElementById("ds-keywords");
             const dsAction = document.getElementById("ds-action");
 
-            // UI Loading state
+            // Hiển thị trạng thái đang tải
             btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>${i18n[currentLang]['analyzing']}</span>`;
             btn.classList.add("opacity-70", "cursor-not-allowed");
             status.classList.remove("hidden");
+            status.innerText = "Đang kết nối API...";
             dsPanel.classList.add("opacity-50");
 
-            // HUGGING FACE API URL
+            // URL CHÍNH XÁC CỦA HUGGING FACE API
+            // Lưu ý: Viết thường toàn bộ, dùng dấu gạch ngang, đuôi .hf.space
             const hf_api_url = "https://vothikimanh-tradmed-nlp-backend.hf.space/api/predict";
 
             try {
@@ -309,15 +312,17 @@
                     body: JSON.stringify({ data: [symptom] }) 
                 });
                 
-                if (!response.ok) throw new Error("API Response Error");
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 
                 const result = await response.json();
                 
-                // Parse result (Assuming format: "Detected Clinical Semantics: word1, word2")
+                // Trích xuất kết quả từ Gradio
                 let textResult = result.data[0];
                 let extractedWords = textResult.includes(":") ? textResult.split(":")[1].trim() : textResult;
 
-                // Update Decision Support UI
+                // Cập nhật UI
                 dsKeywords.innerText = extractedWords;
                 dsKeywords.className = "text-xl font-bold text-primary mt-1";
                 dsAction.innerText = i18n[currentLang]['msg-action'];
@@ -326,12 +331,12 @@
                 dsPanel.classList.add("shadow-[0_0_15px_rgba(222,255,154,0.2)]");
 
             } catch (error) {
-                console.error(error);
+                console.error("Chi tiết lỗi kết nối API:", error);
                 dsKeywords.innerText = "---";
-                dsAction.innerText = i18n[currentLang]['err-api'];
+                dsAction.innerText = i18n[currentLang]['err-api'] + " (Vui lòng kiểm tra lại Backend có đang 'Ngủ' không).";
                 dsAction.className = "text-sm text-red-400 mt-1";
             } finally {
-                // Restore button
+                // Khôi phục nút bấm
                 btn.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> <span>${i18n[currentLang]['input-btn']}</span>`;
                 btn.classList.remove("opacity-70", "cursor-not-allowed");
                 status.classList.add("hidden");
